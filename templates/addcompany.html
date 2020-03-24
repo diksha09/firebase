@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>signIn</title>
+    </head>
+<body>
+<form action="/post_company/" method="post">
+    {% csrf_token %}
+    Name:
+    <input type="text" name="name"><br><br>
+    Address:
+    <input type="text" name="address"><br><br>
+    <input type="submit" value="add">
+
+</form>
+
+
+</body>
+</html>

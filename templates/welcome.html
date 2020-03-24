@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>signIn</title>
+    </head>
+    <style>
+        div{
+            position : absolute;
+            right : 10px;
+            top : 5px
+        }
+    </style>
+<body>
+ <div>
+ <button type="button" onclick="location.href='{% url 'log' %}';">logout</button>
+ </div>
+ welcome  {{e}}
+ <br><br>
+ <button type="button" onclick="location.href='{% url 'create' %}';">Create report</button>
+ <button type="button">Check report</button>
+ <button type="button" onclick="location.href='{% url 'add_company' %}';">create company</button>
+
+ <div class="form-group">
+    <label class="control-label">select company</label>
+    <select class="form-control" id="comp_name" name="comp_name">
+        {% for d in com %}
+        <option value = "{{d.name}}">{{d.name}}</option>
+        {% endfor %}
+        
+    </select>
+</body>
+</html>
